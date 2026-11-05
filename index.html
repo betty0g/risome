@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>risome</title>
+    <link rel="stylesheet" href="./src/style.css">
+  </head>
+
+  <body>
+    <div class="app">
+
+      <main class="preview">
+        <header class="site-header">
+          <h1>risome</h1>
+        </header>
+    
+        <div class="stage">
+          <canvas id="canvas"></canvas>
+        </div>
+      </main>
+    
+      <aside class="panel">
+    
+        <section>
+          <h2>photo</h2>
+          <label for="fileInput" class="button full">upload photo</label>
+          <input type="file" id="fileInput" accept="image/*" hidden />
+        </section>
+    
+        <section>
+          <h2>inks</h2>
+          <div class="inks">
+            <label class="swatch">
+              <input type="color" id="blueInk" value="#3d5588" />
+              <span>ink 1</span>
+            </label>
+            <label class="swatch">
+              <input type="color" id="redInk" value="#f15060" />
+              <span>ink 2</span>
+            </label>
+            <label class="swatch">
+              <input type="color" id="yellowInk" value="#ffe800" />
+              <span>ink 3</span>
+            </label>
+          </div>
+        </section>
+    
+        <section>
+          <h2>print</h2>
+    
+          <label class="field">
+            <span>print detail</span>
+            <input type="range" id="spacing" min="2" max="20" step="0.5" value="4" />
+          </label>
+    
+          <label class="field">
+            <span>ink strength</span>
+            <input type="range" id="inkStrength" min="0.5" max="1.6" step="0.05" value="1.2" />
+          </label>
+    
+          <label class="field">
+            <span>registration</span>
+            <input type="range" id="registration" min="0" max="4" step="0.1" value="1" />
+          </label>
+    
+          <label class="field">
+            <span>texture</span>
+            <input type="range" id="texture" min="0" max="0.15" step="0.01" value="0.04" />
+          </label>
+        </section>
+    
+        <button id="exportBtn" class="button full">export png</button>
+      </aside>
+    
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
